@@ -14,20 +14,19 @@ class Dashboard extends Component {
     const { projects } = this.props.project;
 
     return (
-      <div>
-        <div className="projects">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <h1 className="display-4 text-center">Projects</h1>
-                <br />
-                <CreateProjectButton />
-                <br />
-                <hr />
-                {projects.map(project => (
-                  <ProjectItem key={project.id} project={project} />
-                ))}
-              </div>
+      <div className="projects">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <h1 className="display-4 text-center">Projects</h1>
+              <br />
+              <CreateProjectButton />
+
+              <br />
+              <hr />
+              {projects.map(project => (
+                <ProjectItem key={project.id} project={project} />
+              ))}
             </div>
           </div>
         </div>
